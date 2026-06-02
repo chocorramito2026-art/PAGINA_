@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primer HTML</title>
+</head>
+<body style="background-color: /* Variables y configuración */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #f59e0b;
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --white: #ffffff;
+  --transition: all 0.3s ease; /* Corregido: "oll" a "all" */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Corregido: eliminado "sizing:" extra */
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color); /* Corregido: coincidía con la variable */
+  color: var(--text-color); /* Corregido: coincidía con la variable */
+  font-size: 1.125rem;
+}
+
+/* Layout responsivo */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; /* Corregido: "morgin" a "margin" */
+  padding: 20px; /* Corregido: faltaban los ":" */
+}
+
+/* Hipervínculo */
+a {
+  color: var(--primary-color);
+  text-decoration: none; /* Corregido: "text-decorative" a "text-decoration" */
+  font-weight: 600; /* Corregido: "font-weith" a "font-weight" */
+  position: relative;
+  padding-bottom: 2px;
+  outline: none;
+}
+
+a::after {
+  content: ""; /* Corregido: "contet" y comillas */
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary-color);
+  transition: var(--transition);
+}
+
+a:hover::after,
+a:focus::after {
+  width: 100%;
+}
+
+a:focus {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 4px;
+  border-radius: 2px; /* Corregido: "borrfer-radiius" y sintaxis */
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  height: auto; /* Corregido: "heigth" a "height" */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Corregido: "rgda" a "rgba" y valores */
+  transition: var(--transition);
+  filter: grayscale(20%);
+}
+
+img:hover {
+  transform: translateY(-5px); /* Corregido: "TrsnslateY" a "translateY" */
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+  filter: grayscale(0%);
+}
+
+/* Media responsividad */
+@media (max-width: 768px) { /* Corregido: espacio y ":" en el query */
+  body {
+    font-size: 1rem;
+  }
+  .container {
+    width: 95%;
+  }
+}; font-family: Arial, sans-serif;">
+
+    <h1>Bienvenido a nuestra página</h1>
+    <h2>GRADO 9°B - LAT</h2>
+
+    <hr>
+
+    <h2>Enlaces (Links)</h2>
+    <p>
+        <a href="https://youtu.be/I-cOD2x-qBs?si=OCggsIxBbW8PDtv_">Ir a YouTube</a>
+    </p>
+
+    <h2>Imágenes y Recursos</h2>
+    <p>
+        <img src="https://png.pngtree.com/png-clipart/20230906/original/pngtree-tools-crutch-for-walking-disability-tools-handhold-vector-picture-image_10071505.png" height="250" width="250" alt="Muletas">
+    </p>
+    
+    <p>
+        <a href="https://www.wikipedia.com">Visitar Wikipedia</a>
+    </p>
+
+    <hr>
+
+    <div style="color: #182CDE;">
+        <p>
+            El término puede referirse tanto a las herramientas físicas y digitales que facilitan la autonomía (ayudas técnicas), 
+            como a las escalas utilizadas por profesionales para medir y evaluar el grado de discapacidad de una persona.
+        </p>
+
+        <h3>1. Instrumentos de Evaluación y Medición</h3>
+        <p>Utilizados por profesionales de la salud y el área social:</p>
+        <ul>
+            <li><strong>Índice de Barthel:</strong> Mide la capacidad para realizar 10 actividades básicas de la vida diaria.</li>
+            <li><strong>Escalas INICO:</strong> Herramientas como la SIS-C para niños o la Escala ARC-INICO para autodeterminación.</li>
+            <li><strong>Test WAIS:</strong> Evalúa la capacidad intelectual global (CI).</li>
+            <li><strong>Encuesta Modelo de Discapacidad (OMS):</strong> Genera estadísticas sobre dificultades en el entorno.</li>
+        </ul>
+
+        <h3>2. Dispositivos de Asistencia (Ayudas Técnicas)</h3>
+        <ul>
+            <li><strong>Movilidad:</strong> Sillas de ruedas, andadores, bastones y prótesis.</li>
+            <li><strong>Discapacidad Visual:</strong> Lectores de pantalla, máquinas Sonobriille y dispositivos OrCam My Eye.</li>
+            <li><strong>Discapacidad Auditiva:</strong> Audífonos, implantes cocleares y apps como Visualfy.</li>
+            <li><strong>Adaptaciones de Acceso:</strong> Teclados adaptados y software de reconocimiento de voz.</li>
+        </ul>
